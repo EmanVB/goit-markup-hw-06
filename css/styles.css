@@ -257,12 +257,32 @@
 .form-accept-icon {
     fill: none;
     border: 1px solid black;
+    transition: 250ms;
+    transition-property: fill, border; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-accept>p {
     padding-left: 8px;
 }
 .checkbox-accept {
-    appearance: none;
+    width: 16px;
+    height: 16px;
+    position:absolute;
+    z-index: 999;
+    opacity: 0;
+
+}
+.form-accept .checkbox-accept:focus + .form-accept-icon,
+.form-accept .checkbox-accept:checked:focus + .form-accept-icon {
+    outline: 2px solid black;
+}
+.form-accept .checkbox-accept:checked + .form-accept-icon {
+    background-color: #4D5AE5;
+    border-color: #4D5AE5;
+    fill: white;
+    outline: none;
+    stroke: white;
+    stroke-width: 0.2px;
 }
 .forms-submit {
     position: absolute;
