@@ -230,7 +230,14 @@
     font-size: 12px;
 }
 .form-accept-icon {
-    fill: #2E2F42;
+    fill: none;
+    border: 1px solid black;
+}
+.form-accept>p {
+    padding-left: 8px;
+}
+.checkbox-accept {
+    appearance: none;
 }
 .is-hidden {
     pointer-events: none;
