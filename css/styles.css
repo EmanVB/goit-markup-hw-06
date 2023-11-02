@@ -164,8 +164,11 @@
     flex-shrink: 0;
     border-radius: 50%;
     background-color: #E7E9FC;
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-left: auto;
+    font-size: larger;
     
 }
 .form-message {
@@ -184,12 +187,15 @@
     align-items: center;
     padding-left: 24px;
 }    
-
-.form-input:hover .form-icon {
+.form-input:hover .form-icon,
+.form-input:focus .form-icon {
     fill: #4D5AE5;
 }
 .form-input:hover .form-box {
-    border-color: #4D5AE5;
+    border: 1px solid #4D5AE5;
+}
+.form-box:focus {
+    border: 3px solid #4D5AE5;
 }
 .comment-input:hover .comment-box{
     border-color: #4D5AE5;
@@ -206,11 +212,11 @@
 .form-box {
     width: 360px;
     height: 40px;
-    border: 1px solid black;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     padding-left: 40px;
     transition: 250ms;
-    transition-property: border-color;
+    transition-property: border;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-icon {
@@ -220,6 +226,9 @@
     transition: 250ms;
     transition-property: fill;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+    border: 2px solid #4D5AE5;
+    fill: #4D5AE5;
 }
 .form-modal>label {
     text-align: left;
@@ -233,19 +242,18 @@
 .comment-box {
     width: 360px;
     height: 120px;
-    border: 1px solid #2E2F42;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     display: flex;
     padding-top: 8;
     padding-left: 20;
-    
+    transition: 250ms;
+    transition-property: border;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
 }
-.comment-box:focus {
-    border-color: #4D5AE5;
-}
-.form-box:focus .form-icon{
-    border-color: #4D5AE5;
-    fill: #4D5AE5;
+.comment-box:focus,
+.comment-box:hover {
+    border: 1px solid #4D5AE5;
 }
 .form-accept {
     display: flex;
