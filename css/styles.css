@@ -240,16 +240,22 @@
     gap: 4px;
 }
 .comment-box {
+    font-size: 12px;
+    font-style: normal;
+    color: rgba(46, 47, 66, 0.40);
     width: 360px;
     height: 120px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    display: flex;
     padding-top: 8;
     padding-left: 20;
     transition: 250ms;
     transition-property: border;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);  
+}
+.comment-input>textarea{
+    padding-left: 16px;
+    padding-top: 8px;
 }
 .comment-box:focus,
 .comment-box:hover {
