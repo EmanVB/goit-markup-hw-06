@@ -277,7 +277,6 @@
     position:absolute;
     z-index: 999;
     opacity: 0;
-
 }
 .form-accept .checkbox-accept:focus + .form-accept-icon,
 .form-accept .checkbox-accept:checked:focus + .form-accept-icon {
@@ -541,8 +540,20 @@ footer .footer-link:active{
     padding-left: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px; 
-    border: 1px white solid;
+    border: 1px solid white;
     background: transparent;
+    transition: 250ms;
+    transition-property: border, background, color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-box:hover,
+.subscribe-box:focus {
+    background: white;
+    color: black;
+    border: 1px solid #4D5AE5;
+}
+.subscribe-icon {
+    fill: white;
 }
 .subscribe-button {
     width: 165px;
@@ -558,7 +569,13 @@ footer .footer-link:active{
     font-family: Roboto;
     font-weight: 500;
     border-radius: 4px;
-
+    transition: 250ms;
+    transition-property: border, background;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-button:hover {
+    border: 1px solid #4D5AE5;
+    background: red;
 }
 .btns {
     display: flex;
