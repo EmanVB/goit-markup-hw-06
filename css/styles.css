@@ -35,12 +35,11 @@
 .header-link:hover,
 .header-link:active {
     background-color: red;
-    color: yellowgreen;
 }
 .order:hover,
 .order:active {
     background-color: red;
-    color: yellowgreen;
+
     cursor: pointer;
 }
 .active:active{
@@ -227,6 +226,7 @@
     transition-property: fill;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.form-box:focus .form-icon{
     border: 2px solid #4D5AE5;
     fill: #4D5AE5;
 }
@@ -304,11 +304,13 @@
     border-radius: 4px;
     transition: 250ms;
     box-shadow: 0px 4px 4px white;
-    transition-property: box-shadow;
+    transition-property: background, box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .forms-submit:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    background: red;
+    cursor: pointer;
 }
 .is-hidden {
     pointer-events: none;
@@ -483,7 +485,6 @@ footer {
 footer .footer-link:hover,
 footer .footer-link:active{
     background-color: red;
-    color: yellowgreen;
 }
 .social-media h3{
     color: white;
